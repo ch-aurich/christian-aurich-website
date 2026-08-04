@@ -1,0 +1,47 @@
+{
+  "kunde": "Christian Aurich",
+  "erstelltAm": "2026-07-24",
+  "branche": "Interim CTO & Product Leadership · Cybersecurity & Regulatory Compliance · Outdoor Leadership — Beratung für technologieorientierte Unternehmen",
+  "zielgruppe": "Geschäftsführer, CTOs, technische Mitgründer und Innovationsleiter von Technologie-KMU, Start-ups und Scale-ups, die komplexe Produkte entwickeln und vor organisatorischen oder regulatorischen Herausforderungen stehen",
+  "usp": "Kombination aus nahezu 20 Jahren Berufserfahrung, technischem Know-how und operativer Führungserfahrung — macht Auftraggeber nicht nur schneller/günstiger, sondern langfristig unabhängig von externer Beratung, statt neue Abhängigkeit zu schaffen",
+  "farben": {
+    "primaer": "#1B2A3A",
+    "primaerName": "Deep Navy",
+    "sekundaer": "#4A5560",
+    "sekundaerName": "Graphit",
+    "neutral": "#F5F1EA",
+    "neutralName": "Warmes Off-White",
+    "akzent": "#B8863C",
+    "akzentName": "Bronze"
+  },
+  "typografie": {
+    "headline": "Sora (700, Bold)",
+    "body": "Source Sans 3 (400 Regular / 600 Semibold)",
+    "hinweis": "Headline (Sora, geometrisch/markant) und Fließtext (Source Sans 3, ruhig/gut lesbar) sind bewusst zwei unterschiedliche Fonts als Pairing, kein Eine-Familie-System."
+  },
+  "brandVoice": {
+    "anrede": "Sie",
+    "gendern": "neutral formulieren, kein Sonderzeichen (z. B. 'Entwicklungsleitung' statt 'Entwicklungsleiter/-in')",
+    "tonalitaet": ["erfahren/kompetent", "unabhängig machend", "bodenständig/pragmatisch"],
+    "tonBeschreibung": "Wie ein erfahrener Sparringspartner, der Orientierung gibt — nicht wie eine Hochglanz-Unternehmensberatung und nicht wie ein Motivations-Coach.",
+    "vermeideListe": ["Influencer-/Coach-Sprech (\"Mindset\", \"auf Ihrer Reise\")", "leere Berater-Floskeln (\"ganzheitlich\", \"Synergien\", \"auf Augenhöhe\")", "übertriebener Tech-Jargon ohne kurze Einordnung"],
+    "satzstil": "Klar und sachlich, mittlere Satzlänge. Fachbegriffe nur wenn nötig, dann kurz eingeordnet statt vorausgesetzt.",
+    "referenzbeispiele": {
+      "headline": "Technische Tiefe. Operative Führung. Unabhängigkeit für Sie.",
+      "absatz": "Sie stehen vor einer komplexen technischen Entscheidung, wachsendem Compliance-Druck oder einer Organisation, die nicht mehr mit dem Produkt mitwächst. Ich bringe die Erfahrung mit, das selbst umzusetzen – nicht nur zu empfehlen. Am Ende des Mandats bleibt die Kompetenz in Ihrem Unternehmen, nicht bei mir.",
+      "cta": "Unverbindliches Erstgespräch anfragen"
+    }
+  },
+  "logoDateien": {
+    "lockupTransparent": "logo-lockup-transparent.png",
+    "lockupHintergrund": "logo-lockup-hintergrund.png",
+    "lockupTransparentDunkel": "logo-lockup-transparent-dunkel.png",
+    "iconTransparent": "logo-icon-transparent.png",
+    "iconHintergrund": "logo-icon-hintergrund.png",
+    "iconSvg": "logo-icon.svg",
+    "wortmarkeTransparent": "logo-wortmarke-transparent.png",
+    "wortmarkeHintergrund": "logo-wortmarke-hintergrund.png"
+  },
+  "logoHinweis": "Hauptlogo ist der Lockup (Icon über Wortmarke). Icon = verschmolzenes Monogramm aus C und A mit geteiltem Strich (echter Vektor, Recraft V4.1), Wortmarke = 'Christian Aurich' in Sora Bold. Icon allein für kleine Formate (Favicon, Social-Avatar), Wortmarke allein für schmale horizontale Formate.",
+  "disclaimer": "Dieses Logo wurde KI-gestützt erstellt und dient als kreativer Entwurf. Es wurde keine markenrechtliche Prüfung (z. B. Verwechslungsgefahr mit bestehenden Marken) durchgeführt. Vor der produktiven Nutzung (Website, Geschäftspapiere, Registrierung) empfehlen wir eine Markenrecherche bzw. anwaltliche Prüfung."
+}
