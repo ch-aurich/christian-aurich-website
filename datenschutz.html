@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz — Christian Aurich</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/png" href="brand-assets/logo-icon-transparent.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1B2A3A',
+            'navy-elevated': '#243A4D',
+            'navy-deep': '#121E29',
+            graphite: '#4A5560',
+            cream: '#F5F1EA',
+            bronze: '#B8863C',
+            'bronze-light': '#D9A85C',
+          },
+          fontFamily: {
+            heading: ['Sora', 'sans-serif'],
+            body: ['"Source Sans 3"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { color-scheme: light; }
+    body { font-family: 'Source Sans 3', sans-serif; }
+    h1, h2, h3, .font-heading { font-family: 'Sora', sans-serif; }
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .text-gradient-bronze {
+      background: linear-gradient(100deg, #D9A85C 0%, #B8863C 55%, #8A6428 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .transition-spring {
+      transition-property: transform, opacity, box-shadow, background-color, border-color, color;
+      transition-duration: 320ms;
+      transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    ::selection { background: #B8863C; color: #F5F1EA; }
+  </style>
+</head>
+
+<body class="bg-cream text-navy antialiased min-h-screen flex flex-col">
+  <header class="fixed top-0 inset-x-0 z-50 bg-navy-deep/95 backdrop-blur-sm border-b border-white/5">
+    <nav class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group" aria-label="Zur Startseite">
+        <img src="brand-assets/logo-icon-transparent-dunkel.png" alt="Christian Aurich Logo"
+             class="h-9 w-9 object-contain transition-spring group-hover:scale-105">
+        <span class="font-heading font-bold text-cream text-lg tracking-tight hidden sm:block">Christian Aurich</span>
+      </a>
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-cream/70 hover:text-cream transition-spring">
+        <span aria-hidden="true">←</span> Zur Startseite
+      </a>
+    </nav>
+  </header>
+
+  <main class="flex-1">
+    <section class="relative bg-navy-deep pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden grain">
+      <div class="absolute -top-40 -right-40 w-[32rem] h-[32rem] rounded-full bg-bronze/20 blur-3xl pointer-events-none"></div>
+      <div class="relative max-w-5xl mx-auto px-6 md:px-10">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="h-1.5 w-1.5 rounded-full bg-bronze"></span>
+          <span class="text-xs tracking-[0.2em] text-cream/60 uppercase font-semibold">Rechtliches</span>
+          <span class="h-px w-10 bg-cream/20"></span>
+        </div>
+        <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-[-0.03em] text-cream">
+          <span class="text-gradient-bronze">Datenschutzerklärung</span>
+        </h1>
+        <p class="mt-6 text-lg text-cream/70 leading-[1.7] max-w-2xl">
+          Informationen über die Verarbeitung personenbezogener Daten beim Besuch dieser Website.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 md:py-24">
+      <article class="max-w-4xl mx-auto px-6 md:px-10 space-y-12 text-graphite leading-[1.75]">
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">1. Verantwortlicher</h2>
+          <p>
+            Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
+          </p>
+          <address class="not-italic mt-4">
+            Christian Aurich<br>
+            Zur schönen Aussicht 19<br>
+            04435 Schkeuditz<br>
+            Deutschland<br><br>
+            E-Mail: <span id="privacy-email"></span>
+          </address>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">2. Allgemeines zur Datenverarbeitung</h2>
+          <p>
+            Personenbezogene Daten werden auf dieser Website nur verarbeitet, soweit dies für die Bereitstellung
+            der Website, ihre sichere und stabile Auslieferung, die Kommunikation mit mir oder die Nutzung
+            ausdrücklich aufgerufener externer Dienste erforderlich ist.
+          </p>
+          <p class="mt-4">
+            Eine automatisierte Entscheidungsfindung einschließlich Profiling findet durch mich im Rahmen dieser
+            Website nicht statt.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">3. Bereitstellung der Website und Server-Logfiles</h2>
+          <p>
+            Diese Website wird auf einem von mir administrierten Rootserver bereitgestellt. Beim Aufruf der Website
+            werden technisch erforderliche Verbindungs- und Zugriffsdaten verarbeitet. Dazu können insbesondere
+            IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Ressource, übertragene Datenmenge, Referrer,
+            Browsertyp und Browserversion, Betriebssystem sowie HTTP-Statuscode gehören.
+          </p>
+          <p class="mt-4">
+            Die Verarbeitung erfolgt zur Auslieferung der Website sowie zur Gewährleistung von Stabilität,
+            Funktionsfähigkeit und IT-Sicherheit. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes
+            Interesse liegt im sicheren und zuverlässigen Betrieb meines Internetauftritts sowie in der Erkennung
+            und Abwehr von Missbrauch und Angriffen.
+          </p>
+          <p class="mt-4">
+            Protokolldaten werden nur so lange gespeichert, wie dies für die genannten Zwecke erforderlich ist,
+            und anschließend gelöscht oder anonymisiert, sofern keine gesetzliche Aufbewahrungspflicht oder ein
+            konkreter sicherheitsrelevanter Anlass eine längere Speicherung erfordert.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">4. Google Fonts</h2>
+          <p>
+            Zur einheitlichen Darstellung von Schriftarten verwendet diese Website derzeit Google Fonts. Beim
+            Aufruf der Website werden die benötigten Schriftdateien beziehungsweise Stylesheets von Servern von
+            Google abgerufen. Hierdurch wird insbesondere die IP-Adresse des verwendeten Endgeräts an Google
+            übermittelt.
+          </p>
+          <p class="mt-4">
+            Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Im Rahmen der
+            Bereitstellung des Dienstes kann eine Verarbeitung durch weitere Unternehmen des Google-Konzerns,
+            insbesondere in den USA, nicht ausgeschlossen werden.
+          </p>
+          <p class="mt-4">
+            Die Einbindung dient der einheitlichen und ansprechenden Darstellung dieser Website. Wegen der mit
+            extern eingebundenen Schriftarten verbundenen Datenübermittlung beabsichtige ich, die verwendeten
+            Schriftarten lokal bereitzustellen und damit diese externe Verbindung künftig zu vermeiden.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">5. Tailwind CSS über externes CDN</h2>
+          <p>
+            Für die Darstellung der Website wird derzeit Tailwind CSS über den Dienst
+            <span class="font-mono text-sm">cdn.tailwindcss.com</span> geladen. Beim Abruf dieser Ressource wird
+            technisch bedingt insbesondere die IP-Adresse des verwendeten Endgeräts an den Betreiber der
+            aufgerufenen Infrastruktur übermittelt.
+          </p>
+          <p class="mt-4">
+            Die Einbindung dient der technischen Darstellung und Gestaltung der Website. Auch diese Ressource soll
+            künftig lokal bereitgestellt werden, sodass beim Seitenaufruf keine externe Verbindung für die
+            Bereitstellung von Tailwind CSS erforderlich ist.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">6. Terminbuchung über Google Kalender</h2>
+          <p>
+            Auf dieser Website befindet sich ein Link zu einer Terminbuchungsseite von Google Kalender. Die
+            Terminbuchungsseite ist nicht unmittelbar in diese Website eingebettet. Erst wenn Sie den entsprechenden
+            Link beziehungsweise die Schaltfläche zur Anfrage eines Erstgesprächs anklicken, verlassen Sie diese
+            Website und rufen einen Dienst von Google auf.
+          </p>
+          <p class="mt-4">
+            Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Auf der
+            Google-Terminbuchungsseite können insbesondere Angaben wie Name, E-Mail-Adresse, gewünschter Termin
+            sowie weitere von Ihnen eingegebene Informationen verarbeitet werden. Darüber hinaus verarbeitet Google
+            technisch anfallende Nutzungs- und Verbindungsdaten.
+          </p>
+          <p class="mt-4">
+            Die Terminbuchung dient der Anbahnung und Organisation von Gesprächen. Soweit die Verarbeitung zur
+            Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage erfolgt, ist Art. 6 Abs. 1 lit. b DSGVO die
+            Rechtsgrundlage. Im Übrigen kann die Verarbeitung auf meinem berechtigten Interesse an einer effizienten
+            Terminorganisation gemäß Art. 6 Abs. 1 lit. f DSGVO beruhen.
+          </p>
+          <p class="mt-4">
+            Für die Verarbeitung personenbezogener Daten durch Google auf der von Google betriebenen
+            Terminbuchungsseite gelten ergänzend die Datenschutzbestimmungen von Google.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">7. LinkedIn</h2>
+          <p>
+            Diese Website enthält einen Link zu meinem Profil bei LinkedIn. Es handelt sich nicht um ein
+            eingebettetes LinkedIn-Plugin. Beim bloßen Aufruf dieser Website wird daher über diesen Link keine
+            Verbindung zu LinkedIn hergestellt. Erst wenn Sie den Link anklicken, wird die Website von LinkedIn
+            aufgerufen. Für die dort stattfindende Datenverarbeitung ist der jeweilige Anbieter verantwortlich.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">8. Kontaktaufnahme per E-Mail</h2>
+          <p>
+            Wenn Sie mich per E-Mail kontaktieren, verarbeite ich die von Ihnen übermittelten Daten, insbesondere
+            Ihre E-Mail-Adresse, den Inhalt Ihrer Nachricht und gegebenenfalls Ihren Namen sowie weitere von Ihnen
+            mitgeteilte Informationen, um Ihre Anfrage zu bearbeiten.
+          </p>
+          <p class="mt-4">
+            Erfolgt die Kontaktaufnahme im Zusammenhang mit der Anbahnung oder Durchführung eines Vertrags, ist
+            Art. 6 Abs. 1 lit. b DSGVO Rechtsgrundlage. In anderen Fällen erfolgt die Verarbeitung auf Grundlage
+            meines berechtigten Interesses an der Bearbeitung eingehender Anfragen gemäß Art. 6 Abs. 1 lit. f DSGVO.
+            Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine
+            gesetzlichen Aufbewahrungspflichten oder sonstigen berechtigten Gründe für eine weitere Speicherung
+            bestehen.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">9. Cookies und vergleichbare Technologien</h2>
+          <p>
+            Ich setze auf dieser Website derzeit keine eigenen Analyse-, Marketing- oder Tracking-Cookies ein.
+            Soweit beim Aufruf externer Dienste nach einem bewussten Anklicken eines Links Cookies oder vergleichbare
+            Technologien eingesetzt werden, erfolgt dies auf der Website des jeweiligen Drittanbieters und nach
+            dessen Maßgaben.
+          </p>
+          <p class="mt-4">
+            Sollte die Website künftig um Funktionen ergänzt werden, die eine Einwilligung nach § 25 TDDDG oder
+            der DSGVO erfordern, werden diese Funktionen erst nach einer entsprechenden Einwilligung aktiviert.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">10. Empfänger und Drittlandübermittlungen</h2>
+          <p>
+            Eine Weitergabe personenbezogener Daten erfolgt nur, wenn dies für die genannten Zwecke erforderlich
+            ist, eine gesetzliche Verpflichtung besteht oder eine andere datenschutzrechtliche Rechtsgrundlage
+            vorliegt. Bei der Nutzung von Diensten international tätiger Anbieter kann eine Verarbeitung von Daten
+            außerhalb der Europäischen Union beziehungsweise des Europäischen Wirtschaftsraums, insbesondere in
+            den USA, stattfinden. In solchen Fällen richtet sich die Übermittlung nach den jeweils anwendbaren
+            gesetzlichen Voraussetzungen und den vom jeweiligen Anbieter eingesetzten Garantien.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">11. Ihre Rechte</h2>
+          <p>
+            Ihnen stehen nach Maßgabe der gesetzlichen Voraussetzungen insbesondere das Recht auf Auskunft über
+            Ihre personenbezogenen Daten, Berichtigung unrichtiger Daten, Löschung, Einschränkung der Verarbeitung,
+            Datenübertragbarkeit sowie Widerspruch gegen eine Verarbeitung zu.
+          </p>
+          <p class="mt-4">
+            Soweit eine Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese Einwilligung jederzeit mit
+            Wirkung für die Zukunft widerrufen.
+          </p>
+          <p class="mt-4">
+            Darüber hinaus haben Sie das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">12. Sicherheit</h2>
+          <p>
+            Ich treffe angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten gegen
+            Verlust, Manipulation und unbefugten Zugriff zu schützen. Die Übertragung dieser Website erfolgt
+            verschlüsselt über HTTPS.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-2xl text-navy mb-4">13. Aktualität dieser Datenschutzerklärung</h2>
+          <p>
+            Diese Datenschutzerklärung wird angepasst, wenn sich die eingesetzten Dienste, die technische
+            Ausgestaltung dieser Website oder die rechtlichen Anforderungen ändern.
+          </p>
+          <p class="mt-4 text-sm">Stand: August 2026</p>
+        </section>
+
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-navy-deep py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
+        <div class="flex items-center gap-3">
+          <img src="brand-assets/logo-icon-transparent-dunkel.png" alt="Christian Aurich Logo"
+               class="h-7 w-7 object-contain opacity-80">
+          <span class="text-cream/50 text-sm">© 2026 Christian Aurich</span>
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          <span class="text-cream/20">·</span>
+          <a href="/impressum.html" class="text-cream/60 hover:text-cream transition-spring">Impressum</a>
+          <span class="text-cream/20">·</span>
+          <a href="/datenschutz.html" aria-current="page"
+             class="text-cream hover:text-bronze-light transition-spring">Datenschutz</a>
+        </div>
+      </div>
+
+      <a href="https://www.linkedin.com/in/christian-aurich/" target="_blank" rel="noopener"
+         class="text-cream/60 hover:text-cream transition-spring" aria-label="LinkedIn">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const localPart = ['web', 'site'].join('');
+      const domain = ['christian', 'aurich'].join('-') + '.de';
+      const address = localPart + '@' + domain;
+      const container = document.getElementById('privacy-email');
+
+      if (container) {
+        const link = document.createElement('a');
+        link.href = 'mailto:' + address;
+        link.textContent = address;
+        link.className = 'text-navy underline decoration-bronze/60 underline-offset-4 hover:text-bronze transition-colors';
+        container.appendChild(link);
+      }
+    })();
+  </script>
+</body>
+</html>
