@@ -1,2 +1,3 @@
 temporary screenshots/
 *.enc
+node_modules/
